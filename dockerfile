@@ -12,4 +12,4 @@ COPY . .
 #It will expose the flaskAPI application on port `8000` inside the container
 EXPOSE 8000
 #It is the command that will start and run the flaskAPI application container
-CMD ["python", "main:app", "--host", "0.0.0.0"]
+CMD ["python", "app:app", "--host", "0.0.0.0"]
