@@ -2,7 +2,7 @@
 FROM python:3.10
 #It creates a working directory(app) for the Docker image and container
 WORKDIR /app
-#It copies the framework and the dependencies for the FastAPI application into the working directory
+#It copies the framework and the dependencies for the FlaskAPI application into the working directory
 COPY requirements.txt .
 #It will install the framework and the dependencies in the `requirements.txt` file.
 RUN pip install --upgrade pip
