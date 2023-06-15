@@ -15,4 +15,7 @@ phases:
     commands:
       - echo Pushing the Docker image to the registry
       - docker push partha2064/ml-project:latest
-
+  
+artifacts:
+  file:
+    - /**/*
