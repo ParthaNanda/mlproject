@@ -4,15 +4,15 @@ phases:
   pre_build:
     commands:
       - echo Logging in to the Docker registry
-      - echo $DOCKER_REGISTRY_TOKEN | docker login hub.docker.com -u partha2064 --password-stdin
+      - docker login -u partha2064 -p Radhaswami@123
   build:
     commands:
       - echo Building the Docker image
       - docker build -t ml-project .
+      - echo tagging docker image
+      - docker tag ml-project:latest partha2064/ml-project:latest
   post_build:
     commands:
-      - echo Tagging the Docker image
-      - docker tag ml-project:latest https://hub.docker.com/repositories/partha2064/ml-project
       - echo Pushing the Docker image to the registry
-      - docker push https://hub.docker.com/repositories/partha2064
+      - docker push partha2064/ml-project:latest
 
