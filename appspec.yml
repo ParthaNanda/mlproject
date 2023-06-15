@@ -1,0 +1,7 @@
+version: 0.0
+os: linux
+
+resources:
+  - DockerImage:
+      Name: ml-project:latest
+      ImagePullCredentialsType: SERVICE_ROLE
