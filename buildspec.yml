@@ -12,6 +12,7 @@ phases:
   post_build:
     commands:
       - echo Tagging the Docker image
-      - docker tag ml-project:latest hub.docker.com/repositories/partha2064:ml-project:latest
+      - docker tag ml-project:latest partha2064/ml-project
       - echo Pushing the Docker image to the registry
-      - docker push hub.docker.com/repositories/partha2064:ml-project:latest
+      - docker push partha2064/ml-project
+
