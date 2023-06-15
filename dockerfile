@@ -10,6 +10,6 @@ RUN pip install -r requirements.txt
 #It will copy the remaining files and the source code from the host `flask-api` folder to the `app` container working directory
 COPY . .
 #It will expose the flaskAPI application on port `8000` inside the container
-EXPOSE 8000
+EXPOSE 3000
 #It is the command that will start and run the flaskAPI application container
 CMD ["python", "app.py"]
