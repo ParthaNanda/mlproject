@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to the Docker registry
-      - echo dckr_pat_EiZbuP8PxEtYegKOz02QIbVnNNM | docker login https://hub.docker.com/ -u partha2064 --password-stdin
+      - echo $DOCKER_REGISTRY_TOKEN | docker login hub.docker.com -u partha2064 --password-stdin
   build:
     commands:
       - echo Building the Docker image
@@ -12,6 +12,6 @@ phases:
   post_build:
     commands:
       - echo Tagging the Docker image
-      - docker tag ml-project:latest https://hub.docker.com/repositories/partha2064:ml-project:latest
+      - docker tag ml-project:latest hub.docker.com/repositories/partha2064:ml-project:latest
       - echo Pushing the Docker image to the registry
-      - docker push https://hub.docker.com/repositories/partha2064:ml-project:latest
+      - docker push hub.docker.com/repositories/partha2064:ml-project:latest
