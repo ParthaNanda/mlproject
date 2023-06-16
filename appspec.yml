@@ -9,5 +9,5 @@ resources:
 hooks:
   ApplicationStart:
     - location: scripts/application_start.sh
-      timeout: 300
+      timeout: 360
       runas: root
